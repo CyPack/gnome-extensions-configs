@@ -1,0 +1,437 @@
+[Logo-menu]
+hide-softwarecentre=true
+menu-button-icon-image=0
+show-power-options=true
+symbolic-icon=true
+use-custom-icon=false
+
+[appindicator]
+icon-brightness=0.0
+icon-contrast=0.0
+icon-opacity=240
+icon-saturation=0.0
+icon-size=0
+
+[blur-my-shell]
+pipelines={'pipeline_default': {'name': <'Default'>, 'effects': <[<{'type': <'native_static_gaussian_blur'>, 'id': <'effect_000000000000'>, 'params': <{'radius': <30>, 'brightness': <0.59999999999999998>}>}>]>}, 'pipeline_default_rounded': {'name': <'Default rounded'>, 'effects': <[<{'type': <'native_static_gaussian_blur'>, 'id': <'effect_000000000001'>, 'params': <{'radius': <30>, 'brightness': <0.59999999999999998>}>}>, <{'type': <'corner'>, 'id': <'effect_000000000002'>, 'params': <{'radius': <24>}>}>]>}, 'pipeline_66004807951226': {'name': <'top bar'>, 'effects': <[<{'type': <'native_static_gaussian_blur'>, 'id': <'effect_66327356744614'>, 'params': <{'brightness': <0.93999999999999995>, 'unscaled_radius': <13>}>}>]>}}
+settings-version=2
+
+[blur-my-shell/appfolder]
+brightness=0.59999999999999998
+sigma=30
+
+[blur-my-shell/applications]
+blur=true
+brightness=0.71999999999999997
+dynamic-opacity=false
+opacity=190
+sigma=21
+whitelist=['org.gnome.Nautilus']
+
+[blur-my-shell/coverflow-alt-tab]
+pipeline='pipeline_default'
+
+[blur-my-shell/dash-to-dock]
+blur=false
+brightness=0.59999999999999998
+pipeline='pipeline_default_rounded'
+sigma=30
+static-blur=true
+style-dash-to-dock=0
+
+[blur-my-shell/dash-to-panel]
+blur-original-panel=false
+
+[blur-my-shell/hidetopbar]
+compatibility=false
+
+[blur-my-shell/lockscreen]
+pipeline='pipeline_default'
+
+[blur-my-shell/overview]
+pipeline='pipeline_default'
+
+[blur-my-shell/panel]
+blur=true
+brightness=0.59999999999999998
+override-background=true
+pipeline='pipeline_66004807951226'
+sigma=30
+static-blur=true
+style-panel=0
+unblur-in-overview=true
+
+[blur-my-shell/screenshot]
+pipeline='pipeline_default'
+
+[blur-my-shell/window-list]
+brightness=0.59999999999999998
+sigma=30
+
+[dash-to-dock]
+always-center-icons=true
+animate-show-apps=false
+apply-custom-theme=false
+background-color='rgb(255,255,255)'
+background-opacity=0.12
+click-action='minimize'
+custom-background-color=true
+custom-theme-shrink=true
+dash-max-icon-size=48
+disable-overview-on-startup=false
+dock-fixed=false
+dock-position='BOTTOM'
+extend-height=false
+height-fraction=0.90000000000000002
+icon-size-fixed=true
+multi-monitor=false
+preferred-monitor=-2
+preferred-monitor-by-connector='HDMI-1'
+preview-size-scale=0.0
+running-indicator-style='DEFAULT'
+show-apps-at-top=true
+show-mounts-network=false
+show-mounts-only-mounted=true
+transparency-mode='FIXED'
+
+[ding]
+check-x11wayland=true
+
+[hidetopbar]
+enable-active-window=true
+enable-intellihide=true
+
+[openbar]
+accent-color=['0', '0.75', '0.75']
+accent-override=false
+apply-accent-shell=false
+apply-all-shell=false
+apply-flatpak=false
+apply-gtk=false
+apply-menu-notif=false
+apply-menu-shell=false
+auto-bgalpha=true
+autofg-bar=true
+autofg-menu=true
+autohg-bar=false
+autohg-menu=true
+autotheme-dark='Select Theme'
+autotheme-font=false
+autotheme-light='Select Theme'
+autotheme-refresh=false
+balpha=0.040000000000000001
+bartype='Islands'
+bcolor=['1.0', '1.0', '1.0']
+bg-change=true
+bgalpha=0.0
+bgalpha-wmax=0.92000000000000004
+bgalpha2=0.64000000000000001
+bgcolor=['0.125', '0.125', '0.125']
+bgcolor-wmax=['0.125', '0.125', '0.125']
+bgcolor2=['0.196', '0.173', '0.176']
+bgpalette=true
+bguri='file:///home/ayaz/.local/share/backgrounds/2025-12-14-19-14-02-sea-rocks.png'
+border-wmax=false
+bordertype='solid'
+bottom-margin=6.5
+boxalpha=0.0
+boxcolor=['0.125', '0.125', '0.125']
+bradius=30.0
+buttonbg-wmax=true
+bwidth=2.0
+candy1=['0', '0.61', '0.74']
+candy10=['0.09', '0.19', '0.72']
+candy11=['0.75', '0.49', '0.44']
+candy12=['1', '0.92', '0.12']
+candy13=['0.38', '0.63', '0.92']
+candy14=['0.37', '0.36', '0.39']
+candy15=['0.40', '0.23', '0.72']
+candy16=['1', '0.32', '0.32']
+candy2=['1', '0.41', '0.41']
+candy3=['0.63', '0.16', '0.8']
+candy4=['0.94', '0.60', '0.23']
+candy5=['0.03', '0.41', '0.62']
+candy6=['0.56', '0.18', '0.43']
+candy7=['0.95', '0.12', '0.67']
+candy8=['0.18', '0.76', '0.49']
+candy9=['0.93', '0.20', '0.23']
+candyalpha=1.0
+candybar=false
+card-hint=10
+color-scheme='prefer-dark'
+corner-radius=false
+count1=225443
+count10=83
+count11=9
+count12=1
+count2=94565
+count3=72707
+count4=55773
+count5=52179
+count6=37585
+count7=19660
+count8=2868
+count9=1127
+cust-margin-wmax=false
+dark-accent-color=['0', '0.75', '0.75']
+dark-bcolor=['1.0', '1.0', '1.0']
+dark-bgcolor=['0.125', '0.125', '0.125']
+dark-bgcolor-wmax=['0.125', '0.125', '0.125']
+dark-bgcolor2=['0.196', '0.173', '0.176']
+dark-bguri='file:///home/ayaz/.local/share/backgrounds/2025-12-14-19-14-02-sea-rocks.png'
+dark-boxcolor=['0.125', '0.125', '0.125']
+dark-candy1=['0', '0.61', '0.74']
+dark-candy10=['0.09', '0.19', '0.72']
+dark-candy11=['0.75', '0.49', '0.44']
+dark-candy12=['1', '0.92', '0.12']
+dark-candy13=['0.38', '0.63', '0.92']
+dark-candy14=['0.37', '0.36', '0.39']
+dark-candy15=['0.40', '0.23', '0.72']
+dark-candy16=['1', '0.32', '0.32']
+dark-candy2=['1', '0.41', '0.41']
+dark-candy3=['0.63', '0.16', '0.8']
+dark-candy4=['0.94', '0.60', '0.23']
+dark-candy5=['0.03', '0.41', '0.62']
+dark-candy6=['0.56', '0.18', '0.43']
+dark-candy7=['0.95', '0.12', '0.67']
+dark-candy8=['0.18', '0.76', '0.49']
+dark-candy9=['0.93', '0.20', '0.23']
+dark-dbgcolor=['0.125', '0.125', '0.125']
+dark-fgcolor=['1.0', '1.0', '1.0']
+dark-hcolor=['1.000', '1.000', '1.000']
+dark-hscd-color=['0', '0.7', '0.75']
+dark-iscolor=['0.125', '0.125', '0.125']
+dark-mbcolor=['0.369', '0.361', '0.392']
+dark-mbgcolor=['0.125', '0.125', '0.125']
+dark-mfgcolor=['1.0', '1.0', '1.0']
+dark-mhcolor=['0.404', '0.435', '0.616']
+dark-mscolor=['0.404', '0.435', '0.616']
+dark-mshcolor=['1.0', '1.0', '1.0']
+dark-palette1=['50', '44', '45']
+dark-palette10=['112', '108', '100']
+dark-palette11=['172', '116', '84']
+dark-palette12=['172', '108', '84']
+dark-palette2=['102', '106', '128']
+dark-palette3=['80', '81', '93']
+dark-palette4=['124', '141', '170']
+dark-palette5=['140', '126', '135']
+dark-palette6=['212', '171', '151']
+dark-palette7=['138', '158', '180']
+dark-palette8=['75', '76', '75']
+dark-palette9=['98', '79', '75']
+dark-shcolor=['0', '0', '0']
+dark-smbgcolor=['0.125', '0.125', '0.125']
+dark-vw-color=['0', '0.7', '0.75']
+dark-winbcolor=['0', '0.7', '0.75']
+dashdock-style='Default'
+dbgalpha=0.80000000000000004
+dbgcolor=['0.125', '0.125', '0.125']
+dborder=true
+dbradius=100.0
+default-font='Sans 12'
+destruct-color=['0.75', '0.11', '0.16']
+disize=48.0
+dshadow=true
+fgalpha=0.88
+fgcolor=['1.0', '1.0', '1.0']
+fitts-widgets=true
+font=''
+gradient=false
+gradient-direction='vertical'
+gtk-popover=false
+gtk-shadow='Default'
+gtk-transparency=1.0
+halpha=0.23999999999999999
+handle-border=3.0
+hbar-gtk3only=false
+hcolor=['1.000', '1.000', '1.000']
+headerbar-hint=0
+heffect=false
+height=30.0
+hpad=1.0
+hscd-color=['0', '0.7', '0.75']
+import-export=false
+isalpha=0.46999999999999997
+iscolor=['0.125', '0.125', '0.125']
+light-accent-color=['0', '0.75', '0.75']
+light-bcolor=['1.0', '1.0', '1.0']
+light-bgcolor=['0.125', '0.125', '0.125']
+light-bgcolor-wmax=['0.125', '0.125', '0.125']
+light-bgcolor2=['0', '0.7', '0.75']
+light-bguri='file:///home/ayaz/.local/share/backgrounds/2025-12-14-19-14-02-sea-rocks.png'
+light-boxcolor=['0.125', '0.125', '0.125']
+light-candy1=['0', '0.61', '0.74']
+light-candy10=['0.09', '0.19', '0.72']
+light-candy11=['0.75', '0.49', '0.44']
+light-candy12=['1', '0.92', '0.12']
+light-candy13=['0.38', '0.63', '0.92']
+light-candy14=['0.37', '0.36', '0.39']
+light-candy15=['0.40', '0.23', '0.72']
+light-candy16=['1', '0.32', '0.32']
+light-candy2=['1', '0.41', '0.41']
+light-candy3=['0.63', '0.16', '0.8']
+light-candy4=['0.94', '0.60', '0.23']
+light-candy5=['0.03', '0.41', '0.62']
+light-candy6=['0.56', '0.18', '0.43']
+light-candy7=['0.95', '0.12', '0.67']
+light-candy8=['0.18', '0.76', '0.49']
+light-candy9=['0.93', '0.20', '0.23']
+light-dbgcolor=['0.125', '0.125', '0.125']
+light-fgcolor=['1.0', '1.0', '1.0']
+light-hcolor=['0', '0.7', '0.9']
+light-hscd-color=['0', '0.7', '0.75']
+light-iscolor=['0.125', '0.125', '0.125']
+light-mbcolor=['1.0', '1.0', '1.0']
+light-mbgcolor=['0.125', '0.125', '0.125']
+light-mfgcolor=['1.0', '1.0', '1.0']
+light-mhcolor=['0', '0.7', '0.9']
+light-mscolor=['0', '0.7', '0.75']
+light-mshcolor=['1.0', '1.0', '1.0']
+light-palette1=['50', '44', '45']
+light-palette10=['112', '108', '100']
+light-palette11=['172', '116', '84']
+light-palette12=['172', '108', '84']
+light-palette2=['102', '106', '128']
+light-palette3=['80', '81', '93']
+light-palette4=['124', '141', '170']
+light-palette5=['140', '126', '135']
+light-palette6=['212', '171', '151']
+light-palette7=['138', '158', '180']
+light-palette8=['75', '76', '75']
+light-palette9=['98', '79', '75']
+light-shcolor=['0', '0', '0']
+light-smbgcolor=['0.125', '0.125', '0.125']
+light-vw-color=['0', '0.7', '0.75']
+light-winbcolor=['0', '0.7', '0.75']
+margin=0.40000000000000002
+margin-wmax=2.0
+mbalpha=0.35999999999999999
+mbcolor=['0.369', '0.361', '0.392']
+mbg-gradient=false
+mbgalpha=1.0
+mbgcolor=['0.125', '0.125', '0.125']
+menu-radius=21.0
+menustyle=true
+mfgalpha=1.0
+mfgcolor=['1.0', '1.0', '1.0']
+mhalpha=0.17999999999999999
+mhcolor=['0.404', '0.435', '0.616']
+monitor-height=1080
+monitor-width=1920
+monitors='all'
+msalpha=1.0
+mscolor=['0.404', '0.435', '0.616']
+mshalpha=0.0
+mshcolor=['1.0', '1.0', '1.0']
+neon=false
+neon-wmax=false
+notif-radius=10.0
+palette1=['50', '44', '45']
+palette10=['112', '108', '100']
+palette11=['172', '116', '84']
+palette12=['172', '108', '84']
+palette2=['102', '106', '128']
+palette3=['80', '81', '93']
+palette4=['124', '141', '170']
+palette5=['140', '126', '135']
+palette6=['212', '171', '151']
+palette7=['138', '158', '180']
+palette8=['75', '76', '75']
+palette9=['98', '79', '75']
+pause-reload=false
+position='Top'
+prominent1=['100', '100', '100']
+prominent2=['100', '100', '100']
+prominent3=['100', '100', '100']
+prominent4=['100', '100', '100']
+prominent5=['100', '100', '100']
+prominent6=['100', '100', '100']
+qtoggle-radius=50.0
+radius-bottomleft=true
+radius-bottomright=true
+radius-topleft=true
+radius-topright=true
+reloadstyle=true
+removestyle=false
+sbar-gradient='none'
+set-bottom-margin=false
+set-fullscreen=true
+set-notif-position=false
+set-notifications=false
+set-overview=true
+set-yarutheme=false
+shadow=false
+shalpha=0.20000000000000001
+shcolor=['0', '0', '0']
+sidebar-hint=10
+slider-height=4.0
+smbgalpha=0.94999999999999996
+smbgcolor=['0.125', '0.125', '0.125']
+smbgoverride=false
+success-color=['0.15', '0.635', '0.41']
+traffic-light=false
+trigger-autotheme=false
+trigger-reload=false
+view-hint=0
+vpad=1.0
+vw-color=['0', '0.7', '0.75']
+warning-color=['0.96', '0.83', '0.17']
+width-bottom=true
+width-left=true
+width-right=true
+width-top=true
+winbalpha=0.75
+winbcolor=['0', '0.7', '0.75']
+winbradius=15.0
+winbwidth=0.0
+window-hint=0
+wmax-hbarhint=false
+wmaxbar=false
+
+[search-light]
+animation-speed=100.0
+background-color=(1.0, 1.0, 1.0, 0.093333333730697632)
+blur-background=false
+blur-brightness=0.59999999999999998
+blur-sigma=30.0
+border-radius=7.0
+entry-font-size=1
+monitor-count=1
+preferred-monitor=0
+scale-height=0.0
+scale-width=0.10000000000000001
+shortcut-search=['<Alt>space']
+text-color=(1.0, 1.0, 1.0, 1.0)
+use-animations=true
+
+[space-bar/appearance]
+application-styles='.space-bar {\n  -natural-hpadding: 12px;\n}\n\n.space-bar-workspace-label.active {\n  margin: 0 4px;\n  background-color: rgba(255,255,255,0.3);\n  color: rgba(255,255,255,1);\n  border-color: rgba(0,0,0,0);\n  font-weight: 700;\n  border-radius: 4px;\n  border-width: 0px;\n  padding: 3px 8px;\n}\n\n.space-bar-workspace-label.inactive {\n  margin: 0 4px;\n  background-color: rgba(0,0,0,0);\n  color: rgba(255,255,255,1);\n  border-color: rgba(0,0,0,0);\n  font-weight: 700;\n  border-radius: 4px;\n  border-width: 0px;\n  padding: 3px 8px;\n}\n\n.space-bar-workspace-label.inactive.empty {\n  margin: 0 4px;\n  background-color: rgba(0,0,0,0);\n  color: rgba(255,255,255,0.5);\n  border-color: rgba(0,0,0,0);\n  font-weight: 700;\n  border-radius: 4px;\n  border-width: 0px;\n  padding: 3px 8px;\n}'
+
+[space-bar/behavior]
+always-show-numbers=true
+
+[space-bar/state]
+version=34
+
+[tasks-in-panel]
+hover-raise-window=true
+light-style=false
+move-date=false
+scroll-panel=false
+show-active-workspace=true
+show-favorites-menu=false
+show-focused-window=false
+show-power-profile=true
+show-window-icon=true
+show-window-title=false
+show-workspaces-bar=false
+yaru-panel=false
+
+[tiling-assistant]
+active-window-hint-color='rgb(211,70,21)'
+last-version-installed=46
+overridden-settings={'org.gnome.mutter.edge-tiling': <@mb nothing>, 'org.gnome.mutter.keybindings.toggle-tiled-left': <@mb nothing>, 'org.gnome.mutter.keybindings.toggle-tiled-right': <@mb nothing>}
+tiling-popup-all-workspace=true
+
+[user-theme]
+name=''

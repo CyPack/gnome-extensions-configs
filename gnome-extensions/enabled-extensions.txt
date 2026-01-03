@@ -1,0 +1,12 @@
+blur-my-shell@aunetx
+openbar@neuromorph
+clipboard-indicator@tudmotu.com
+dash-to-dock@micxgx.gmail.com
+logomenu@aryan_k
+search-light@icedman.github.com
+appindicatorsupport@rgcjonas.gmail.com
+space-bar@luchrioh
+tasks-in-panel@fthx
+ding@rastersoft.com
+tiling-assistant@ubuntu.com
+ubuntu-appindicators@ubuntu.com
