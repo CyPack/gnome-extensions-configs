@@ -22,10 +22,35 @@ Gerekli komutlar:
 - `rsync`
 - `starship` (opsiyonel, prompt istiyorsan)
 
+Kontrol/yonetim araci (onerilen):
+
+- `gnome-tweaks`
+- `gnome-extension-manager`
+- Nobara icin: `nobara-sync` (resmi update akisi)
+
 Fedora icin ornek:
 
 ```bash
-sudo dnf install -y gnome-extensions-app dconf rsync starship
+sudo dnf install -y gnome-extensions-app dconf rsync starship gnome-tweaks gnome-extension-manager
+```
+
+## Preflight Kontrolleri (GNOME/KDE/Nobara)
+
+```bash
+# Desktop tespiti
+echo "XDG_CURRENT_DESKTOP=$XDG_CURRENT_DESKTOP"
+echo "DESKTOP_SESSION=$DESKTOP_SESSION"
+
+# GNOME araclari
+command -v gnome-extensions
+command -v gnome-tweaks
+command -v gnome-extension-manager
+
+# KDE araclari (KDE kullaniyorsan)
+command -v kpackagetool6 || command -v kpackagetool5
+
+# Nobara updater (Nobara kullaniyorsan)
+command -v nobara-sync
 ```
 
 ## Agent-Friendly Kurulum
@@ -34,6 +59,18 @@ Repo klasorunde:
 
 ```bash
 bash scripts/install-gnome.sh
+```
+
+Onay sorusu olmadan calistirmak istersen:
+
+```bash
+bash scripts/install-gnome.sh --yes
+```
+
+Sadece kontrol/dry-run:
+
+```bash
+bash scripts/install-gnome.sh --dry-run
 ```
 
 Ne yapar:
