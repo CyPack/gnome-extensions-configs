@@ -63,18 +63,24 @@ done < gnome-extensions/enabled-extensions.txt
 cp starship.toml ~/.config/starship.toml
 ```
 
-## Nobara Linux Tavsiyeleri
+## Nobara Linux Tavsiyeleri (2026-02-21 dogrulandi)
 
 Nobara tarafinda GNOME extension varsayimi surume gore degisebilir. Bu nedenle once mevcut durumu denetleyip sonra bu repo ayarlarini uygulamak daha guvenli.
 
-Kisa ozet:
+2026 odakli kisa bulgular:
 
-1. Nobara 39 gecis notlarinda (26 Aralik 2023), Nobara'ya ozel bircok GNOME shell ozellestirmesi/Fedora disi extension kurulumlarinin geri alindigi belirtiliyor.
-2. Nobara'nin resmi `nobara-images` repo kickstart dosyalarinda GNOME 39/42/43 image'larinda extension tarafi oldukca minimal; `gnome-shell-extension-gamemode` gorunuyor.
-3. Eski Nobara 38 "official" image tarafinda `blur-my-shell`, `dash-to-panel`, `arc-menu` gibi ek extension paketleri vardi.
-4. Bu fark nedeniyle "Nobara default extension listesi" tek bir sabit liste degil, surume gore degisiyor.
+1. Resmi indirme sayfasinda `Nobara-43` ISO'lari gorunuyor (`GNOME`, `KDE`, `Official`, `Steam`) ve dosya tarihleri `2026-01-25/26/27`.
+2. Resmi FAQ'da `Official` surumun "modified KDE layout" oldugu, GNOME ve KDE'nin ayrica sunuldugu belirtiliyor.
+3. Resmi `nobara-images` repo kickstart dosyalarinda guncel GNOME image'larda (N42/N43) acikca gorunen extension paketi pratikte `gnome-shell-extension-gamemode`.
+4. N42 kickstart'ta `-gnome-shell-extension-background-logo` satiri var (kaldirma), ek "varsayilan extension listesi" olarak yorumlanmamali.
 
-Nobara GNOME'da uygulama oncesi kontrol:
+Nobara update/upgrade politikasi (resmi):
+
+1. Wiki `update-system` sayfasi: `dnf update` tek basina yeterli degil, `Update System` akisi oneriliyor.
+2. Wiki `upgrade-nobara` sayfasi: `dnf-plugin-system-upgrade` yontemi icin acikca `DON'T USE THESE` uyarisi var.
+3. CLI tarafinda `nobara-sync` ve `nobara-sync cli` akisi var.
+
+Nobara GNOME'da bu repo'yu uygulamadan once:
 
 ```bash
 # Aktif extensionlar
@@ -87,16 +93,11 @@ rpm -qa | sort | rg '^gnome-shell-extension'
 dconf dump /org/gnome/shell/extensions/ > ~/extensions-backup-nobara.dconf
 ```
 
-Nobara update tavsiyesi:
-
-1. Sistem guncellemeleri icin Nobara'nin `Update System` akisini kullan.
-2. `GNOME Software`/`Discover` tarafini daha cok Flatpak uygulama guncellemeleri icin kullan.
-3. Buyuk GNOME surum gecislerinden sonra extension uyumlulugunu tekrar kontrol et.
-
 Not:
 
 - Bu repo `blur-my-shell` kapali yaklasimini korur; performans nedeniyle Nobara'da da varsayilan olarak kapali tutman tavsiye edilir.
 - Nobara KDE kullaniyorsan alttaki KDE bolumu dogrudan daha uygun.
+- Detayli 2026 arastirma notu: `docs/nobara-research-2026.md`
 
 ## Theme Snapshot (Guncel)
 
@@ -163,8 +164,11 @@ Arastirma anahtar kelimeleri:
 
 ## Arastirma Kaynaklari
 
-- Nobara resmi site: `https://nobaraproject.org/`
-- Nobara 39 release/changelog (26 Aralik 2023): `https://nobaraproject.org/2023/12/26/nobara-39-released/`
-- Nobara changelog/yol haritasi (13 Mayis 2025): `https://nobaraproject.org/category/changelogs/`
-- Nobara Wiki New User Guide: `https://wiki.nobaraproject.org/general-usage/new-user-guide/`
+- Nobara download sayfasi (Nobara 43 ISO listesi): `https://nobaraproject.org/download-nobara/`
+- Nobara Wiki FAQ (Official/GNOME/KDE aciklamasi): `https://wiki.nobaraproject.org/FAQ/FAQ`
+- Nobara Wiki Update System: `https://wiki.nobaraproject.org/general-usage/troubleshooting/update-system`
+- Nobara Wiki Upgrade Nobara: `https://wiki.nobaraproject.org/general-usage/troubleshooting/upgrade-nobara`
+- Nobara Wiki New User Guide (general guidelines): `https://wiki.nobaraproject.org/en/new-user-guide-general-guidelines`
 - Nobara images (official kickstarts): `https://github.com/Nobara-Project/nobara-images`
+- N43 GNOME kickstart (line 430): `https://raw.githubusercontent.com/Nobara-Project/nobara-images/main/ISO-ready-flattened-kickstarts/43/flat-nobara-live-gnome-43.ks`
+- N43 GNOME NV kickstart (line 441): `https://raw.githubusercontent.com/Nobara-Project/nobara-images/main/ISO-ready-flattened-kickstarts/43/nv-flat-nobara-live-gnome-43.ks`
