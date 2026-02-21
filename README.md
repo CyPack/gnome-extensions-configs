@@ -1,4 +1,4 @@
-# Dotfiles
+# GNOME Extensions Configs (Fedora/Nobara)
 
 Fedora odakli, paylasima uygun kisisel desktop config paketi.
 
