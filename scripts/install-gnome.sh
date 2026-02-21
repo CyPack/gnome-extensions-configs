@@ -60,6 +60,54 @@ if [ -f /etc/os-release ]; then
   OS_ID="$(. /etc/os-release && printf '%s' "${ID:-unknown}")"
 fi
 
+PKG_MGR="unknown"
+if command -v dnf >/dev/null 2>&1; then
+  PKG_MGR="dnf"
+elif command -v apt-get >/dev/null 2>&1; then
+  PKG_MGR="apt"
+elif command -v pacman >/dev/null 2>&1; then
+  PKG_MGR="pacman"
+elif command -v zypper >/dev/null 2>&1; then
+  PKG_MGR="zypper"
+fi
+
+install_hint() {
+  local kind="$1"
+  case "$PKG_MGR" in
+    dnf)
+      if [ "$kind" = "required" ]; then
+        echo "sudo dnf install -y gnome-extensions-app dconf rsync"
+      else
+        echo "sudo dnf install -y gnome-tweaks gnome-extension-manager"
+      fi
+      ;;
+    apt)
+      if [ "$kind" = "required" ]; then
+        echo "sudo apt-get install -y gnome-shell-extension-prefs dconf-cli rsync"
+      else
+        echo "sudo apt-get install -y gnome-tweaks gnome-shell-extension-manager"
+      fi
+      ;;
+    pacman)
+      if [ "$kind" = "required" ]; then
+        echo "sudo pacman -S --needed gnome-shell-extensions dconf rsync"
+      else
+        echo "sudo pacman -S --needed gnome-tweaks extension-manager"
+      fi
+      ;;
+    zypper)
+      if [ "$kind" = "required" ]; then
+        echo "sudo zypper install -y gnome-extensions dconf rsync"
+      else
+        echo "sudo zypper install -y gnome-tweaks gnome-shell-extension-manager"
+      fi
+      ;;
+    *)
+      echo "Install required GNOME packages manually for your distro."
+      ;;
+  esac
+}
+
 if printf "%s" "${XDG_CURRENT_DESKTOP:-}" | grep -Eqi 'gnome'; then
   IS_GNOME=1
 elif printf "%s" "${DESKTOP_SESSION:-}" | grep -Eqi 'gnome'; then
@@ -94,10 +142,11 @@ done
 
 echo "Desktop: $DESKTOP_INFO"
 echo "OS: $OS_NAME ($OS_ID)"
+echo "Package manager: $PKG_MGR"
 echo "Required checks: dconf gsettings gnome-extensions rsync"
 if [ "${#missing_required[@]}" -gt 0 ]; then
   echo "Missing required dependencies: ${missing_required[*]}" >&2
-  echo "Fedora/Nobara example: sudo dnf install -y gnome-extensions-app dconf rsync" >&2
+  echo "Install hint: $(install_hint required)" >&2
   exit 1
 fi
 
@@ -121,7 +170,7 @@ fi
 
 if [ "${#missing_recommended[@]}" -gt 0 ]; then
   echo "Recommended tools missing: ${missing_recommended[*]}" >&2
-  echo "Recommended install: sudo dnf install -y gnome-tweaks gnome-extension-manager" >&2
+  echo "Recommended install hint: $(install_hint recommended)" >&2
 fi
 
 if [ "$DRY_RUN" -eq 1 ]; then

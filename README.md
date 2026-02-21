@@ -11,6 +11,7 @@ Fedora odakli, paylasima uygun kisisel desktop config paketi.
 - `gnome-extensions/extensions/`: Export edilen extension dosyalari
 - `starship.toml`: Starship prompt config
 - `scripts/install-gnome.sh`: Agent-friendly, idempotent kurulum scripti
+- `scripts/preflight-adaptive.sh`: Interaktif ortam tespiti + preflight raporu + yonlendirme
 
 ## Dependency (GNOME yolu)
 
@@ -51,6 +52,18 @@ command -v kpackagetool6 || command -v kpackagetool5
 
 # Nobara updater (Nobara kullaniyorsan)
 command -v nobara-sync
+```
+
+Interaktif/adaptive preflight (onerilen):
+
+```bash
+bash scripts/preflight-adaptive.sh
+```
+
+Sadece rapor uret:
+
+```bash
+bash scripts/preflight-adaptive.sh --report-only
 ```
 
 ## Agent-Friendly Kurulum
