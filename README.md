@@ -63,6 +63,41 @@ done < gnome-extensions/enabled-extensions.txt
 cp starship.toml ~/.config/starship.toml
 ```
 
+## Nobara Linux Tavsiyeleri
+
+Nobara tarafinda GNOME extension varsayimi surume gore degisebilir. Bu nedenle once mevcut durumu denetleyip sonra bu repo ayarlarini uygulamak daha guvenli.
+
+Kisa ozet:
+
+1. Nobara 39 gecis notlarinda (26 Aralik 2023), Nobara'ya ozel bircok GNOME shell ozellestirmesi/Fedora disi extension kurulumlarinin geri alindigi belirtiliyor.
+2. Nobara'nin resmi `nobara-images` repo kickstart dosyalarinda GNOME 39/42/43 image'larinda extension tarafi oldukca minimal; `gnome-shell-extension-gamemode` gorunuyor.
+3. Eski Nobara 38 "official" image tarafinda `blur-my-shell`, `dash-to-panel`, `arc-menu` gibi ek extension paketleri vardi.
+4. Bu fark nedeniyle "Nobara default extension listesi" tek bir sabit liste degil, surume gore degisiyor.
+
+Nobara GNOME'da uygulama oncesi kontrol:
+
+```bash
+# Aktif extensionlar
+gnome-extensions list --enabled
+
+# Kurulu extension paketleri
+rpm -qa | sort | rg '^gnome-shell-extension'
+
+# Dconf yedegi (rollback icin)
+dconf dump /org/gnome/shell/extensions/ > ~/extensions-backup-nobara.dconf
+```
+
+Nobara update tavsiyesi:
+
+1. Sistem guncellemeleri icin Nobara'nin `Update System` akisini kullan.
+2. `GNOME Software`/`Discover` tarafini daha cok Flatpak uygulama guncellemeleri icin kullan.
+3. Buyuk GNOME surum gecislerinden sonra extension uyumlulugunu tekrar kontrol et.
+
+Not:
+
+- Bu repo `blur-my-shell` kapali yaklasimini korur; performans nedeniyle Nobara'da da varsayilan olarak kapali tutman tavsiye edilir.
+- Nobara KDE kullaniyorsan alttaki KDE bolumu dogrudan daha uygun.
+
 ## Theme Snapshot (Guncel)
 
 - Icon theme: `WhiteSur`
@@ -125,3 +160,11 @@ Arastirma anahtar kelimeleri:
 - `kwin tiling script fedora`
 - `plasma media controller widget`
 - `kvantum fedora setup`
+
+## Arastirma Kaynaklari
+
+- Nobara resmi site: `https://nobaraproject.org/`
+- Nobara 39 release/changelog (26 Aralik 2023): `https://nobaraproject.org/2023/12/26/nobara-39-released/`
+- Nobara changelog/yol haritasi (13 Mayis 2025): `https://nobaraproject.org/category/changelogs/`
+- Nobara Wiki New User Guide: `https://wiki.nobaraproject.org/general-usage/new-user-guide/`
+- Nobara images (official kickstarts): `https://github.com/Nobara-Project/nobara-images`
