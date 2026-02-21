@@ -2,6 +2,8 @@
 
 Fedora odakli, paylasima uygun kisisel desktop config paketi.
 
+![GNOME Extensions mevcut durum](assets/extensions-manager-screenshot.png)
+
 ## Icerik
 
 - `gnome-extensions/enabled-extensions.txt`: Aktif edilmesi istenen GNOME extension UUID listesi
@@ -48,10 +50,6 @@ Not:
 - `blur-my-shell` bu repoda bilerek kapali tutuluyor (enabled listede yok).
 - Neden: `blur-my-shell` ozellikle pencere/background blur efektlerinde sistemi ciddi sekilde yorabiliyor; CPU/GPU yukunu arttirip takilma ve animasyon gecikmesi yaratabiliyor.
 - Acmak istersen: `gnome-extensions enable blur-my-shell@aunetx`
-
-## Extensions Durumu (Ekran Goruntusu)
-
-![GNOME Extensions mevcut durum](assets/extensions-manager-screenshot.png)
 
 ## Manuel Kurulum
 
