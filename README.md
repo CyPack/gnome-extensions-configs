@@ -45,7 +45,13 @@ Ne yapar:
 Not:
 
 - GNOME Shell restart/islem yenilemesini kendin yap: Wayland'de logout/login, X11'de `Alt+F2` sonra `r`.
-- `blur-my-shell` bu repoda bilerek kapali tutuluyor (enabled listede yok). Acmak istersen: `gnome-extensions enable blur-my-shell@aunetx`
+- `blur-my-shell` bu repoda bilerek kapali tutuluyor (enabled listede yok).
+- Neden: `blur-my-shell` ozellikle pencere/background blur efektlerinde sistemi ciddi sekilde yorabiliyor; CPU/GPU yukunu arttirip takilma ve animasyon gecikmesi yaratabiliyor.
+- Acmak istersen: `gnome-extensions enable blur-my-shell@aunetx`
+
+## Extensions Durumu (Ekran Goruntusu)
+
+![GNOME Extensions mevcut durum](assets/extensions-manager-screenshot.png)
 
 ## Manuel Kurulum
 
