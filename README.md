@@ -45,6 +45,7 @@ Ne yapar:
 Not:
 
 - GNOME Shell restart/islem yenilemesini kendin yap: Wayland'de logout/login, X11'de `Alt+F2` sonra `r`.
+- `blur-my-shell` bu repoda bilerek kapali tutuluyor (enabled listede yok). Acmak istersen: `gnome-extensions enable blur-my-shell@aunetx`
 
 ## Manuel Kurulum
 
@@ -57,6 +58,41 @@ while read -r ext; do
 done < gnome-extensions/enabled-extensions.txt
 cp starship.toml ~/.config/starship.toml
 ```
+
+## Theme Snapshot (Guncel)
+
+- Icon theme: `WhiteSur`
+- GTK theme: `Tahoe-Dark`
+- Cursor theme: `MacTahoe-cursors`
+
+## Icon Theme Degistirme
+
+GNOME:
+
+```bash
+# Mevcut icon theme
+gsettings get org.gnome.desktop.interface icon-theme
+
+# Icon theme degistir
+gsettings set org.gnome.desktop.interface icon-theme 'WhiteSur'
+```
+
+KDE/Plasma:
+
+```bash
+# Paket arama ornegi (Fedora)
+dnf search icon-theme | head
+
+# Uygulama yolu:
+# System Settings -> Appearance -> Icons
+```
+
+Tavsiye:
+
+1. Icon paketini `~/.icons` veya `~/.local/share/icons` altina kur.
+2. GNOME'da `gsettings` veya `gnome-tweaks` ile sec.
+3. KDE'de System Settings uzerinden secip oturum yenile.
+4. Paylasimda lisansi acik olan icon paketlerini tercih et.
 
 ## KDE Kullananlar Icin Alternatif Yol
 
